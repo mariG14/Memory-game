@@ -109,12 +109,7 @@ function checkMatch () {
     const optionOneId= cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
 
-    if(optionOneId==optionTwoId) {
-        alert('you have clicked the same image!')
-
-    }
    if( cardsChosen[0] == cardsChosen[1] && optionOneId!=optionTwoId) {
-    alert ('you found a match')
     cards[optionOneId].setAttribute('src', './images/white.avif')
     cards[optionTwoId].setAttribute('src', './images/white.avif')
     cards[optionOneId].removeEventListener('click', handleClick)
@@ -123,7 +118,6 @@ function checkMatch () {
    } else {
     cards[optionOneId].setAttribute('src', './images/blank.jpg')
     cards[optionTwoId].setAttribute('src', './images/blank.jpg')
-    alert('try again')
    }
    scoreDisplay.textContent= cardWon.length
    cardsChosen= []
